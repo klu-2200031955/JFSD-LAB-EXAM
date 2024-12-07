@@ -13,12 +13,11 @@ public class ClientDemo {
 		Session s = sf.openSession();
 		Transaction t = s.beginTransaction();
 		
-		Device d = new Device();
-		d.setId(1);
-		d.setBrand("Samsung");
-		d.setModel("S23");
-		d.setPrice(160000.00);
-		s.save(d);
+//		Device d = new Device();
+//		d.setId(1);
+//		d.setBrand("Smartphone");
+//		d.setModel("S23");
+//		d.setPrice(160000.00);
 		
 		Smartphone sp = new Smartphone();
 		sp.setId(2);
@@ -27,7 +26,6 @@ public class ClientDemo {
 		sp.setPrice(16000.00);
 		sp.setOs("Android");
 		sp.setCameraResolution("100mpx");
-		s.save(sp);
 		
 		Tablet tb = new Tablet();
 		tb.setId(3);
@@ -36,6 +34,9 @@ public class ClientDemo {
 		tb.setPrice(100000.00);
 		tb.setScreenSize(100);
 		tb.setBatteryLife(24);
+
+//		s.save(d);
+		s.save(sp);
 		s.save(tb);
 		
 		t.commit();
