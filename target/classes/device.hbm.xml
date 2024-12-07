@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.klu.jfsd.exam.Device">
+		<id name="id"/>
+		<property name="brand"/>
+		<property name="model"/>
+		<property name="price"/>
+		<subclass name="com.klu.jfsd.exam.Smartphone">
+			<property name="os"/>
+			<property name="cameraResolution"/>
+		</subclass>
+		<subclass name="com.klu.jfsd.exam.Tablet">
+			<property name="screenSize"/>
+			<property name="batteryList"/>
+		</subclass>
+	</class>
+</hibernate-mapping>
